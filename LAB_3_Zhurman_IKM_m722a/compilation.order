@@ -1,0 +1,8 @@
+.\src\beep_driver.vhd
+.\src\control_fsm.vhd
+.\src\HEXLed_driver.vhd
+.\src\lab3_hexled_demo.vhd
+.\src\led_driver.vhd
+.\src\switch_driver.vhd
+.\src\lab3_hexled_demo_tb.vhd
+.\src\hexled_driver_tb.vhd

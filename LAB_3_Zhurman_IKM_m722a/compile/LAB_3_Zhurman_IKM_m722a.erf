@@ -1,0 +1,5 @@
+WARNING DAGGEN_0523: "The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available."
+MESSAGE "File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/control_fsm.vhd" 
+MESSAGE "Compile Entity "control_fsm"" 
+MESSAGE "Compile Architecture "control_fsm_arch" of Entity "control_fsm"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]" 

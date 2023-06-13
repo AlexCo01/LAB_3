@@ -1,0 +1,17 @@
+58
+~E 1 "../src/beep_driver.vhd" 11 beep_driver
+~A 1 "../src/beep_driver.vhd" 27 beep_driver_arch
+~E 1 "../src/control_fsm.vhd" 14 control_fsm
+~A 1 "../src/control_fsm.vhd" 38 control_fsm_arch
+~E 1 "../src/hexled_driver.vhd" 12 hexled_driver
+~A 1 "../src/hexled_driver.vhd" 36 hexled_driver_arch
+~E 1 "../src/hexled_driver_tb.vhd" 12 hexled_driver_tb
+~A 1 "../src/hexled_driver_tb.vhd" 15 hexled_driver_tb_arch
+~E 1 "../src/lab3_hexled_demo.vhd" 12 lab3_hexled_demo
+~A 1 "../src/lab3_hexled_demo.vhd" 28 lab3_hexled_demo_arch
+~E 1 "../src/lab3_hexled_demo_tb.vhd" 10 lab3_hexled_demo_tb
+~A 1 "../src/lab3_hexled_demo_tb.vhd" 13 lab3_hexled_demo_tb_arch
+~E 1 "../src/led_driver.vhd" 10 led_driver
+~A 1 "../src/led_driver.vhd" 23 led_driver_arch
+~E 1 "../src/switch_driver.vhd" 14 switch_driver
+~A 1 "../src/switch_driver.vhd" 34 switch_driver_arch

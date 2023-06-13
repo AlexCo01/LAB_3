@@ -1,0 +1,1128 @@
+# Design: Design LAB_3_Zhurman_IKM_m722a already active.
+# DESIGN: Default Design Language: VHDL
+# DESIGN: Default BDE Language: VHDL
+# DESIGN: Flow Manager: Not Defined
+runscript -do "C:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/hexled_driver_tb_run.do"
+# # Script to test hexled_driver module
+SetActiveLib -work
+comp -include "$dsn\src\hexled_driver.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/hexled_driver.vhd
+# Compile Entity "hexled_driver"
+# Compile Architecture "hexled_driver_arch" of Entity "hexled_driver"
+# Top-level unit(s) detected:
+# Entity => hexled_driver
+# Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+comp -include "$dsn\src\hexled_driver_tb.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/hexled_driver_tb.vhd
+# Compile Entity "hexled_driver_tb"
+# Compile Architecture "hexled_driver_tb_arch" of Entity "hexled_driver_tb"
+# Compile success 0 Errors 0 Warnings  Analysis time :  32.0 [ms]
+asim +access +r hexled_driver_tb 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6608 kB (elbread=427 elab2=6042 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Designs\LAB_3_Zhurman_IKM_m722a\LAB_3_Zhurman_IKM_m722a\src\wave.asdb
+#  22:14, 13 ?a?aiy 2023 ?.
+#  Simulation has been initialized
+wave 
+wave -noreg CLK
+wave -noreg RST
+wave -noreg dot_test
+wave -noreg digit_test
+# # add outputs
+wave -divider "hexled outputs"
+# VSIM: 4 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb'.
+wave -noreg segment_data
+wave -noreg digit_select
+# # add special signal
+wave -noreg hexdigit
+run 3250 us
+# VSIM: 3 object(s) traced.
+# KERNEL: stopped at time: 3250 us
+runscript -do "C:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/lab3_hexled_demo_tb.do"
+# # Script to run lab3 main testbench
+SetActiveLib -work
+comp -include "$dsn\src\beep_driver.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/beep_driver.vhd
+# Compile Entity "beep_driver"
+# Compile Architecture "beep_driver_arch" of Entity "beep_driver"
+# Compile success 0 Errors 0 Warnings  Analysis time :  32.0 [ms]
+comp -include "$dsn\src\led_driver.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/led_driver.vhd
+# Compile Entity "led_driver"
+# Compile Architecture "led_driver_arch" of Entity "led_driver"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+comp -include "$dsn\src\switch_driver.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/switch_driver.vhd
+# Compile Entity "switch_driver"
+# Compile Architecture "switch_driver_arch" of Entity "switch_driver"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+comp -include "$dsn\src\hexled_driver.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/hexled_driver.vhd
+# Compile Entity "hexled_driver"
+# Compile Architecture "hexled_driver_arch" of Entity "hexled_driver"
+# Compile success 0 Errors 0 Warnings  Analysis time :  15.0 [ms]
+comp -include "$dsn\src\control_fsm.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/control_fsm.vhd
+# Compile Entity "control_fsm"
+# Compile Architecture "control_fsm_arch" of Entity "control_fsm"
+# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
+comp -include "$dsn\src\lab3_hexled_demo_tb\lab3_hexled_demo_tb.vhd"
+# Error: c:\My_Designs\LAB_3_Zhurman_IKM_m722a\LAB_3_Zhurman_IKM_m722a\src\lab3_hexled_demo_tb\lab3_hexled_demo_tb.vhd: no such file
+asim +access +r lab3_hexled_demo_tb 
+# VSIM: Simulation has finished.
+# Error: VSIM: Unknown library unit `lab3_hexled_demo_tb' specified.
+# Error: VSIM: cannot select specified top-level
+# Error: DO_001 in file C:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/lab3_hexled_demo_tb.do line 9
+# Error: Cannot run C:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/lab3_hexled_demo_tb.do
+runscript -do "C:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/lab3_hexled_demo_tb.do"
+# # Script to run lab3 main testbench
+SetActiveLib -work
+comp -include "$dsn\src\beep_driver.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/beep_driver.vhd
+# Compile Entity "beep_driver"
+# Compile Architecture "beep_driver_arch" of Entity "beep_driver"
+# Compile success 0 Errors 0 Warnings  Analysis time :  15.0 [ms]
+comp -include "$dsn\src\led_driver.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/led_driver.vhd
+# Compile Entity "led_driver"
+# Compile Architecture "led_driver_arch" of Entity "led_driver"
+# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
+comp -include "$dsn\src\switch_driver.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/switch_driver.vhd
+# Compile Entity "switch_driver"
+# Compile Architecture "switch_driver_arch" of Entity "switch_driver"
+# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
+comp -include "$dsn\src\hexled_driver.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/hexled_driver.vhd
+# Compile Entity "hexled_driver"
+# Compile Architecture "hexled_driver_arch" of Entity "hexled_driver"
+# Compile success 0 Errors 0 Warnings  Analysis time :  15.0 [ms]
+comp -include "$dsn\src\control_fsm.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/control_fsm.vhd
+# Compile Entity "control_fsm"
+# Compile Architecture "control_fsm_arch" of Entity "control_fsm"
+# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
+comp -include "$dsn\src\lab3_hexled_demo_tb.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/lab3_hexled_demo_tb.vhd
+# Compile Entity "lab3_hexled_demo_tb"
+# Compile Architecture "lab3_hexled_demo_tb_arch" of Entity "lab3_hexled_demo_tb"
+# Error: COMP96_0078: lab3_hexled_demo_tb.vhd : (45, 19): Unknown identifier "lab3_hexled_demo".
+# Error: COMP96_0055: lab3_hexled_demo_tb.vhd : (45, 14): Cannot find context item "work.lab3_hexled_demo".
+# Compile failure 2 Errors 0 Warnings  Analysis time :  15.0 [ms]
+# Error: DO_001 in file C:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/lab3_hexled_demo_tb.do line 8
+# Error: Cannot run C:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/lab3_hexled_demo_tb.do
+runscript -do "C:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/lab3_hexled_demo_tb.do"
+# # Script to run lab3 main testbench
+SetActiveLib -work
+comp -include "$dsn\src\beep_driver.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/beep_driver.vhd
+# Compile Entity "beep_driver"
+# Compile Architecture "beep_driver_arch" of Entity "beep_driver"
+# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
+comp -include "$dsn\src\led_driver.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/led_driver.vhd
+# Compile Entity "led_driver"
+# Compile Architecture "led_driver_arch" of Entity "led_driver"
+# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
+comp -include "$dsn\src\switch_driver.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/switch_driver.vhd
+# Compile Entity "switch_driver"
+# Compile Architecture "switch_driver_arch" of Entity "switch_driver"
+# Compile success 0 Errors 0 Warnings  Analysis time :  15.0 [ms]
+comp -include "$dsn\src\hexled_driver.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/hexled_driver.vhd
+# Compile Entity "hexled_driver"
+# Compile Architecture "hexled_driver_arch" of Entity "hexled_driver"
+# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
+comp -include "$dsn\src\control_fsm.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/control_fsm.vhd
+# Compile Entity "control_fsm"
+# Compile Architecture "control_fsm_arch" of Entity "control_fsm"
+# Compile success 0 Errors 0 Warnings  Analysis time :  15.0 [ms]
+comp -include "$dsn\src\lab3_hexled_demo.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/lab3_hexled_demo.vhd
+# Compile Entity "lab3_hexled_demo"
+# Compile Architecture "lab3_hexled_demo_arch" of Entity "lab3_hexled_demo"
+# Compile success 0 Errors 0 Warnings  Analysis time :  32.0 [ms]
+asim +access +r lab3_hexled_demo_tb 
+# ELBREAD: Elaboration process.
+# ELBREAD: Error: Architecture 'lab3_hexled_demo_tb' of entity 'lab3_hexled_demo_tb' not found in library 'LAB_3_Zhurman_IKM_m722a'.
+# ELBREAD: Error: Elaboration process completed with errors.
+# Design: Error: Elaboration failed
+# Error: VSIM: cannot select specified top-level
+# Error: DO_001 in file C:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/lab3_hexled_demo_tb.do line 9
+# Error: Cannot run C:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/lab3_hexled_demo_tb.do
+runscript -do "C:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/lab3_hexled_demo_tb.do"
+# # Script to run lab3 main testbench
+SetActiveLib -work
+comp -include "$dsn\src\beep_driver.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/beep_driver.vhd
+# Compile Entity "beep_driver"
+# Compile Architecture "beep_driver_arch" of Entity "beep_driver"
+# Compile success 0 Errors 0 Warnings  Analysis time :  32.0 [ms]
+comp -include "$dsn\src\led_driver.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/led_driver.vhd
+# Compile Entity "led_driver"
+# Compile Architecture "led_driver_arch" of Entity "led_driver"
+# Compile success 0 Errors 0 Warnings  Analysis time :  15.0 [ms]
+comp -include "$dsn\src\switch_driver.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/switch_driver.vhd
+# Compile Entity "switch_driver"
+# Compile Architecture "switch_driver_arch" of Entity "switch_driver"
+# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
+comp -include "$dsn\src\hexled_driver.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/hexled_driver.vhd
+# Compile Entity "hexled_driver"
+# Compile Architecture "hexled_driver_arch" of Entity "hexled_driver"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+comp -include "$dsn\src\control_fsm.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/control_fsm.vhd
+# Compile Entity "control_fsm"
+# Compile Architecture "control_fsm_arch" of Entity "control_fsm"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+comp -include "$dsn\src\lab3_hexled_demo.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/lab3_hexled_demo.vhd
+# Compile Entity "lab3_hexled_demo"
+# Compile Architecture "lab3_hexled_demo_arch" of Entity "lab3_hexled_demo"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+asim +access +r lab3_hexled_demo
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6519 kB (elbread=427 elab2=5949 kernel=142 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Designs\LAB_3_Zhurman_IKM_m722a\LAB_3_Zhurman_IKM_m722a\src\wave.asdb
+#  22:23, 13 ?a?aiy 2023 ?.
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb'.
+# Warning: WAVEFORM: Object matching /hexled_driver_tb/clk not found in c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /hexled_driver_tb/rst not found in c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /hexled_driver_tb/dot_test not found in c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /hexled_driver_tb/digit_test not found in c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /hexled_driver_tb/segment_data not found in c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /hexled_driver_tb/digit_select not found in c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /hexled_driver_tb/hexdigit not found in c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb.
+wave
+# # testbench signals
+wave -noreg CLK
+wave -noreg RST
+wave -noreg swi_test
+# VSIM: No objects matching.
+wave -noreg sw_prev
+# VSIM: No objects matching.
+wave -noreg sw_next
+# VSIM: No objects matching.
+wave -noreg sw_right
+# VSIM: No objects matching.
+wave -noreg sw_left
+# VSIM: No objects matching.
+wave -noreg segment_data
+# VSIM: No objects matching.
+wave -noreg digit_select
+# VSIM: No objects matching.
+wave -noreg led_state
+# VSIM: No objects matching.
+wave -noreg beep_sound
+# VSIM: No objects matching.
+# # hexdigit display decoder
+wave -noreg hexdisplay
+# VSIM: No objects matching.
+# # main fsm signals
+wave -vgroup "main FSM" "UUT/main_fsm/fsm_state" "UUT/main_fsm/reg_sig"
+# VSIM: 2 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb'.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo/CLK" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo/RST" has already been traced.
+# VSIM: 2 object(s) traced.
+# VSIM: No objects matching.
+# # switch driver LEFT signals
+wave -vgroup "SW-LEFT" "UUT/sw_drv1/sw_state_shiftreg" "UUT/sw_drv1/RIE" "UUT/sw_drv1/FAE"
+# VSIM: No objects matching.
+# # switch driver RIGHT signals
+wave -vgroup "SW-LEFT" "UUT/sw_drv2/sw_state_shiftreg" "UUT/sw_drv2/RIE" "UUT/sw_drv2/FAE"
+# VSIM: No objects matching.
+# # switch driver NEXT signals
+wave -vgroup "SW-LEFT" "UUT/sw_drv3/sw_state_shiftreg" "UUT/sw_drv3/RIE" "UUT/sw_drv3/FAE"
+# VSIM: No objects matching.
+# # switch driver PREV signals
+wave -vgroup "SW-LEFT" "UUT/sw_drv4/sw_state_shiftreg" "UUT/sw_drv4/RIE" "UUT/sw_drv4/FAE"
+# VSIM: No objects matching.
+# # switch driver BEEPER signals
+wave -vgroup "BEEPER" "UUT/beep_drv/snd_state" "UUT/beep_drv/beep_counter" "UUT/beep_drv/snd_counter"  
+# VSIM: No objects matching.
+run 360 us
+# KERNEL: stopped at time: 360 us
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo/CLK" has already been traced.
+# VSIM: 0 object(s) traced.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo/RST" has already been traced.
+# VSIM: 0 object(s) traced.
+# VSIM: 1 object(s) traced.
+# VSIM: 1 object(s) traced.
+# VSIM: 1 object(s) traced.
+# VSIM: 1 object(s) traced.
+# VSIM: 1 object(s) traced.
+# VSIM: 1 object(s) traced.
+# VSIM: 1 object(s) traced.
+# VSIM: 1 object(s) traced.
+# VSIM: 1 object(s) traced.
+# VSIM: 1 object(s) traced.
+# VSIM: 1 object(s) traced.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo/BPO_sig" has already been traced.
+# VSIM: 27 object(s) traced.
+restart
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6519 kB (elbread=427 elab2=5949 kernel=142 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Designs\LAB_3_Zhurman_IKM_m722a\LAB_3_Zhurman_IKM_m722a\src\wave.asdb
+#  22:24, 13 ?a?aiy 2023 ?.
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb'.
+# Waveform file 'untitled.awc' connected to 'c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb'.
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 3000 ns
+# KERNEL: stopped at time: 3500 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+restart
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6519 kB (elbread=427 elab2=5949 kernel=142 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Designs\LAB_3_Zhurman_IKM_m722a\LAB_3_Zhurman_IKM_m722a\src\wave.asdb
+#  22:24, 13 ?a?aiy 2023 ?.
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb'.
+# Waveform file 'untitled.awc' connected to 'c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb'.
+run 3000 ns
+# KERNEL: stopped at time: 3 us
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+runscript -do "C:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/lab3_hexled_demo_tb.do"
+# # Script to run lab3 main testbench
+SetActiveLib -work
+comp -include "$dsn\src\beep_driver.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/beep_driver.vhd
+# Compile Entity "beep_driver"
+# Compile Architecture "beep_driver_arch" of Entity "beep_driver"
+# Compile success 0 Errors 0 Warnings  Analysis time :  15.0 [ms]
+comp -include "$dsn\src\led_driver.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/led_driver.vhd
+# Compile Entity "led_driver"
+# Compile Architecture "led_driver_arch" of Entity "led_driver"
+# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
+comp -include "$dsn\src\switch_driver.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/switch_driver.vhd
+# Compile Entity "switch_driver"
+# Compile Architecture "switch_driver_arch" of Entity "switch_driver"
+# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
+comp -include "$dsn\src\hexled_driver.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/hexled_driver.vhd
+# Compile Entity "hexled_driver"
+# Compile Architecture "hexled_driver_arch" of Entity "hexled_driver"
+# Compile success 0 Errors 0 Warnings  Analysis time :  15.0 [ms]
+comp -include "$dsn\src\control_fsm.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/control_fsm.vhd
+# Compile Entity "control_fsm"
+# Compile Architecture "control_fsm_arch" of Entity "control_fsm"
+# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
+comp -include "$dsn\src\lab3_hexled_demo.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/lab3_hexled_demo.vhd
+# Compile Entity "lab3_hexled_demo"
+# Compile Architecture "lab3_hexled_demo_arch" of Entity "lab3_hexled_demo"
+# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
+asim +access +r lab3_hexled_demo
+# VSIM: Simulation has finished.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6519 kB (elbread=427 elab2=5949 kernel=142 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Designs\LAB_3_Zhurman_IKM_m722a\LAB_3_Zhurman_IKM_m722a\src\wave.asdb
+#  22:29, 13 ?a?aiy 2023 ?.
+#  Simulation has been initialized
+wave
+# # testbench signals
+wave -noreg CLK
+wave -noreg RST
+wave -noreg swi_test
+# VSIM: No objects matching.
+wave -noreg sw_prev
+# VSIM: No objects matching.
+wave -noreg sw_next
+# VSIM: No objects matching.
+wave -noreg sw_right
+# VSIM: No objects matching.
+wave -noreg sw_left
+# VSIM: No objects matching.
+wave -noreg segment_data
+# VSIM: No objects matching.
+wave -noreg digit_select
+# VSIM: No objects matching.
+wave -noreg led_state
+# VSIM: No objects matching.
+wave -noreg beep_sound
+# VSIM: No objects matching.
+# # hexdigit display decoder
+wave -noreg hexdisplay
+# VSIM: No objects matching.
+# # main fsm signals
+wave -vgroup "main FSM" "UUT/main_fsm/fsm_state" "UUT/main_fsm/reg_sig"
+# VSIM: 2 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb'.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo/CLK" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo/RST" has already been traced.
+# VSIM: 2 object(s) traced.
+# VSIM: No objects matching.
+# # switch driver LEFT signals
+wave -vgroup "SW-LEFT" "UUT/sw_drv1/sw_state_shiftreg" "UUT/sw_drv1/RIE" "UUT/sw_drv1/FAE"
+# VSIM: No objects matching.
+# # switch driver RIGHT signals
+wave -vgroup "SW-LEFT" "UUT/sw_drv2/sw_state_shiftreg" "UUT/sw_drv2/RIE" "UUT/sw_drv2/FAE"
+# VSIM: No objects matching.
+# # switch driver NEXT signals
+wave -vgroup "SW-LEFT" "UUT/sw_drv3/sw_state_shiftreg" "UUT/sw_drv3/RIE" "UUT/sw_drv3/FAE"
+# VSIM: No objects matching.
+# # switch driver PREV signals
+wave -vgroup "SW-LEFT" "UUT/sw_drv4/sw_state_shiftreg" "UUT/sw_drv4/RIE" "UUT/sw_drv4/FAE"
+# VSIM: No objects matching.
+# # switch driver BEEPER signals
+wave -vgroup "BEEPER" "UUT/beep_drv/snd_state" "UUT/beep_drv/beep_counter" "UUT/beep_drv/snd_counter"  
+# VSIM: No objects matching.
+run 360 us
+# KERNEL: stopped at time: 360 us
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+runscript -do "C:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/lab3_hexled_demo_tb.do"
+# # Script to run lab3 main testbench
+SetActiveLib -work
+comp -include "$dsn\src\beep_driver.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/beep_driver.vhd
+# Compile Entity "beep_driver"
+# Compile Architecture "beep_driver_arch" of Entity "beep_driver"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+comp -include "$dsn\src\led_driver.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/led_driver.vhd
+# Compile Entity "led_driver"
+# Compile Architecture "led_driver_arch" of Entity "led_driver"
+# Compile success 0 Errors 0 Warnings  Analysis time :  15.0 [ms]
+comp -include "$dsn\src\switch_driver.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/switch_driver.vhd
+# Compile Entity "switch_driver"
+# Compile Architecture "switch_driver_arch" of Entity "switch_driver"
+# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
+comp -include "$dsn\src\hexled_driver.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/hexled_driver.vhd
+# Compile Entity "hexled_driver"
+# Compile Architecture "hexled_driver_arch" of Entity "hexled_driver"
+# Compile success 0 Errors 0 Warnings  Analysis time :  15.0 [ms]
+comp -include "$dsn\src\control_fsm.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/control_fsm.vhd
+# Compile Entity "control_fsm"
+# Compile Architecture "control_fsm_arch" of Entity "control_fsm"
+# Compile success 0 Errors 0 Warnings  Analysis time :  32.0 [ms]
+comp -include "$dsn\src\lab3_hexled_demo.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/lab3_hexled_demo.vhd
+# Compile Entity "lab3_hexled_demo"
+# Compile Architecture "lab3_hexled_demo_arch" of Entity "lab3_hexled_demo"
+# Compile success 0 Errors 0 Warnings  Analysis time :  15.0 [ms]
+asim +access +r lab3_hexled_demo
+# VSIM: Simulation has finished.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6519 kB (elbread=427 elab2=5949 kernel=142 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Designs\LAB_3_Zhurman_IKM_m722a\LAB_3_Zhurman_IKM_m722a\src\wave.asdb
+#  22:30, 13 ?a?aiy 2023 ?.
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb'.
+wave
+# # testbench signals
+wave -noreg CLK
+wave -noreg RST
+wave -noreg swi_test
+# VSIM: No objects matching.
+wave -noreg sw_prev
+# VSIM: No objects matching.
+wave -noreg sw_next
+# VSIM: No objects matching.
+wave -noreg sw_right
+# VSIM: No objects matching.
+wave -noreg sw_left
+# VSIM: No objects matching.
+wave -noreg segment_data
+# VSIM: No objects matching.
+wave -noreg digit_select
+# VSIM: No objects matching.
+wave -noreg led_state
+# VSIM: No objects matching.
+wave -noreg beep_sound
+# VSIM: No objects matching.
+# # hexdigit display decoder
+wave -noreg hexdisplay
+# VSIM: No objects matching.
+# # main fsm signals
+wave -vgroup "main FSM" "UUT/main_fsm/fsm_state" "UUT/main_fsm/reg_sig"
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo/CLK" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo/RST" has already been traced.
+# VSIM: 0 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb'.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo/CLK" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo/RST" has already been traced.
+# VSIM: 0 object(s) traced.
+# VSIM: No objects matching.
+# # switch driver LEFT signals
+wave -vgroup "SW-LEFT" "UUT/sw_drv1/sw_state_shiftreg" "UUT/sw_drv1/RIE" "UUT/sw_drv1/FAE"
+# VSIM: No objects matching.
+# # switch driver RIGHT signals
+wave -vgroup "SW-LEFT" "UUT/sw_drv2/sw_state_shiftreg" "UUT/sw_drv2/RIE" "UUT/sw_drv2/FAE"
+# VSIM: No objects matching.
+# # switch driver NEXT signals
+wave -vgroup "SW-LEFT" "UUT/sw_drv3/sw_state_shiftreg" "UUT/sw_drv3/RIE" "UUT/sw_drv3/FAE"
+# VSIM: No objects matching.
+# # switch driver PREV signals
+wave -vgroup "SW-LEFT" "UUT/sw_drv4/sw_state_shiftreg" "UUT/sw_drv4/RIE" "UUT/sw_drv4/FAE"
+# VSIM: No objects matching.
+# # switch driver BEEPER signals
+wave -vgroup "BEEPER" "UUT/beep_drv/snd_state" "UUT/beep_drv/beep_counter" "UUT/beep_drv/snd_counter"  
+# VSIM: No objects matching.
+run 360 us
+# KERNEL: stopped at time: 360 us
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo/CLK" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo/RST" has already been traced.
+# VSIM: 38 object(s) traced.
+restart
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6519 kB (elbread=427 elab2=5949 kernel=142 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Designs\LAB_3_Zhurman_IKM_m722a\LAB_3_Zhurman_IKM_m722a\src\wave.asdb
+#  22:30, 13 ?a?aiy 2023 ?.
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb'.
+# Waveform file 'untitled.awc' connected to 'c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb'.
+run 3000 ns
+# KERNEL: stopped at time: 3 us
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+runscript -do "C:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/lab3_hexled_demo_tb.do"
+# # Script to run lab3 main testbench
+SetActiveLib -work
+comp -include "$dsn\src\beep_driver.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/beep_driver.vhd
+# Compile Entity "beep_driver"
+# Compile Architecture "beep_driver_arch" of Entity "beep_driver"
+# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
+comp -include "$dsn\src\led_driver.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/led_driver.vhd
+# Compile Entity "led_driver"
+# Compile Architecture "led_driver_arch" of Entity "led_driver"
+# Compile success 0 Errors 0 Warnings  Analysis time :  15.0 [ms]
+comp -include "$dsn\src\switch_driver.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/switch_driver.vhd
+# Compile Entity "switch_driver"
+# Compile Architecture "switch_driver_arch" of Entity "switch_driver"
+# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
+comp -include "$dsn\src\hexled_driver.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/hexled_driver.vhd
+# Compile Entity "hexled_driver"
+# Compile Architecture "hexled_driver_arch" of Entity "hexled_driver"
+# Compile success 0 Errors 0 Warnings  Analysis time :  32.0 [ms]
+comp -include "$dsn\src\control_fsm.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/control_fsm.vhd
+# Compile Entity "control_fsm"
+# Compile Architecture "control_fsm_arch" of Entity "control_fsm"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+comp -include "$dsn\src\lab3_hexled_demo_td.vhd"
+# Error: c:\My_Designs\LAB_3_Zhurman_IKM_m722a\LAB_3_Zhurman_IKM_m722a\src\lab3_hexled_demo_td.vhd: no such file
+asim +access +r lab3_hexled_demo_td
+# VSIM: Simulation has finished.
+# Error: VSIM: Unknown library unit `lab3_hexled_demo_td' specified.
+# Error: VSIM: cannot select specified top-level
+# Error: DO_001 in file C:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/lab3_hexled_demo_tb.do line 9
+# Error: Cannot run C:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/lab3_hexled_demo_tb.do
+runscript -do "C:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/lab3_hexled_demo_tb.do"
+# # Script to run lab3 main testbench
+SetActiveLib -work
+comp -include "$dsn\src\beep_driver.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/beep_driver.vhd
+# Compile Entity "beep_driver"
+# Compile Architecture "beep_driver_arch" of Entity "beep_driver"
+# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
+comp -include "$dsn\src\led_driver.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/led_driver.vhd
+# Compile Entity "led_driver"
+# Compile Architecture "led_driver_arch" of Entity "led_driver"
+# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
+comp -include "$dsn\src\switch_driver.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/switch_driver.vhd
+# Compile Entity "switch_driver"
+# Compile Architecture "switch_driver_arch" of Entity "switch_driver"
+# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
+comp -include "$dsn\src\hexled_driver.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/hexled_driver.vhd
+# Compile Entity "hexled_driver"
+# Compile Architecture "hexled_driver_arch" of Entity "hexled_driver"
+# Compile success 0 Errors 0 Warnings  Analysis time :  15.0 [ms]
+comp -include "$dsn\src\control_fsm.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/control_fsm.vhd
+# Compile Entity "control_fsm"
+# Compile Architecture "control_fsm_arch" of Entity "control_fsm"
+# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
+comp -include "$dsn\src\lab3_hexled_demo_tb.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/lab3_hexled_demo_tb.vhd
+# Compile Entity "lab3_hexled_demo_tb"
+# Compile Architecture "lab3_hexled_demo_tb_arch" of Entity "lab3_hexled_demo_tb"
+# Compile success 0 Errors 0 Warnings  Analysis time :  15.0 [ms]
+asim +access +r lab3_hexled_demo_tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6535 kB (elbread=427 elab2=5965 kernel=142 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Designs\LAB_3_Zhurman_IKM_m722a\LAB_3_Zhurman_IKM_m722a\src\wave.asdb
+#  22:32, 13 ?a?aiy 2023 ?.
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb'.
+# Warning: WAVEFORM: Object matching /lab3_hexled_demo/CLK not found in c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /lab3_hexled_demo/RST not found in c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb.
+# Waveform file 'untitled.awc' connected to 'c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb'.
+# Warning: WAVEFORM: Object matching /lab3_hexled_demo/CLK not found in c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /lab3_hexled_demo/RST not found in c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /lab3_hexled_demo/CLK not found in c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /lab3_hexled_demo/RST not found in c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /lab3_hexled_demo/SWI not found in c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /lab3_hexled_demo/SEG not found in c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /lab3_hexled_demo/DIG not found in c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /lab3_hexled_demo/LDO not found in c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /lab3_hexled_demo/BPO not found in c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /lab3_hexled_demo/RST_sig not found in c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /lab3_hexled_demo/SWI_sig not found in c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /lab3_hexled_demo/LED_sig not found in c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /lab3_hexled_demo/SEG_data_sig not found in c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /lab3_hexled_demo/DIG_sel_sig not found in c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /lab3_hexled_demo/BPO_sig not found in c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /lab3_hexled_demo/sw1_left_sig not found in c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /lab3_hexled_demo/sw2_right_sig not found in c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /lab3_hexled_demo/sw3_next_sig not found in c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /lab3_hexled_demo/sw4_prev_sig not found in c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /lab3_hexled_demo/led0_mode_sig not found in c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /lab3_hexled_demo/led1_mode_sig not found in c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /lab3_hexled_demo/led2_mode_sig not found in c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /lab3_hexled_demo/led3_mode_sig not found in c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /lab3_hexled_demo/dot_sig not found in c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /lab3_hexled_demo/digit0_sig not found in c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /lab3_hexled_demo/digit1_sig not found in c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /lab3_hexled_demo/digit2_sig not found in c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /lab3_hexled_demo/digit3_sig not found in c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /lab3_hexled_demo/digit4_sig not found in c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /lab3_hexled_demo/digit5_sig not found in c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /lab3_hexled_demo/beep_mode_sig not found in c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /lab3_hexled_demo/beep_run_sig not found in c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /lab3_hexled_demo/BOARD_CLK_FREQ not found in c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /lab3_hexled_demo/SND_MODE not found in c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /lab3_hexled_demo/interval_1sec not found in c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /lab3_hexled_demo/interval_100ms not found in c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /lab3_hexled_demo/interval_2ms not found in c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /lab3_hexled_demo/interval_5ms not found in c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /lab3_hexled_demo/interval_1ms not found in c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /lab3_hexled_demo/long_beep_period not found in c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /lab3_hexled_demo/short_beep_period not found in c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /lab3_hexled_demo/sound_freq_period not found in c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb.
+wave
+# # testbench signals
+wave -noreg CLK
+wave -noreg RST
+wave -noreg swi_test
+wave -noreg sw_prev
+wave -noreg sw_next
+wave -noreg sw_right
+wave -noreg sw_left
+wave -noreg segment_data
+wave -noreg digit_select
+wave -noreg led_state
+wave -noreg beep_sound
+# # hexdigit display decoder
+wave -noreg hexdisplay
+# # main fsm signals
+wave -vgroup "main FSM" "UUT/main_fsm/fsm_state" "UUT/main_fsm/reg_sig"
+# VSIM: 12 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb'.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo_tb/clk" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo_tb/rst" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo_tb/swi_test" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo_tb/sw_prev" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo_tb/sw_next" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo_tb/sw_right" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo_tb/sw_left" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo_tb/segment_data" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo_tb/digit_select" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo_tb/led_state" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo_tb/beep_sound" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo_tb/hexdisplay" has already been traced.
+# VSIM: 12 object(s) traced.
+# WAVEFORM: 2 signal(s) inserted to virtual group 'main FSM'.
+# # switch driver LEFT signals
+wave -vgroup "SW-LEFT" "UUT/sw_drv1/sw_state_shiftreg" "UUT/sw_drv1/RIE" "UUT/sw_drv1/FAE"
+# WAVEFORM: 3 signal(s) inserted to virtual group 'SW-LEFT'.
+# # switch driver RIGHT signals
+wave -vgroup "SW-LEFT" "UUT/sw_drv2/sw_state_shiftreg" "UUT/sw_drv2/RIE" "UUT/sw_drv2/FAE"
+# WAVEFORM: 3 signal(s) inserted to virtual group 'SW-LEFT'.
+# # switch driver NEXT signals
+wave -vgroup "SW-LEFT" "UUT/sw_drv3/sw_state_shiftreg" "UUT/sw_drv3/RIE" "UUT/sw_drv3/FAE"
+# WAVEFORM: 3 signal(s) inserted to virtual group 'SW-LEFT'.
+# # switch driver PREV signals
+wave -vgroup "SW-LEFT" "UUT/sw_drv4/sw_state_shiftreg" "UUT/sw_drv4/RIE" "UUT/sw_drv4/FAE"
+# WAVEFORM: 3 signal(s) inserted to virtual group 'SW-LEFT'.
+# # switch driver BEEPER signals
+wave -vgroup "BEEPER" "UUT/beep_drv/snd_state" "UUT/beep_drv/beep_counter" "UUT/beep_drv/snd_counter"  
+# WAVEFORM: 3 signal(s) inserted to virtual group 'BEEPER'.
+run 360 us
+# KERNEL: stopped at time: 360 us
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo_tb/sw_right" has already been traced.
+# VSIM: 0 object(s) traced.
+restart
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6535 kB (elbread=427 elab2=5965 kernel=142 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Designs\LAB_3_Zhurman_IKM_m722a\LAB_3_Zhurman_IKM_m722a\src\wave.asdb
+#  22:32, 13 ?a?aiy 2023 ?.
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb'.
+# Waveform file 'untitled.awc' connected to 'c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb'.
+# Waveform file 'untitled.awc' connected to 'c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb'.
+# WAVEFORM: 2 signal(s) inserted to virtual group 'main FSM'.
+# WAVEFORM: 3 signal(s) inserted to virtual group 'SW-LEFT'.
+# WAVEFORM: 3 signal(s) inserted to virtual group 'SW-LEFT'.
+# WAVEFORM: 3 signal(s) inserted to virtual group 'SW-LEFT'.
+# WAVEFORM: 3 signal(s) inserted to virtual group 'SW-LEFT'.
+# WAVEFORM: 3 signal(s) inserted to virtual group 'BEEPER'.
+run 3000 ns
+# KERNEL: stopped at time: 3 us
+runscript -do "C:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/lab3_hexled_demo_tb.do"
+# # Script to run lab3 main testbench
+SetActiveLib -work
+comp -include "$dsn\src\beep_driver.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/beep_driver.vhd
+# Compile Entity "beep_driver"
+# Compile Architecture "beep_driver_arch" of Entity "beep_driver"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+comp -include "$dsn\src\led_driver.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/led_driver.vhd
+# Compile Entity "led_driver"
+# Compile Architecture "led_driver_arch" of Entity "led_driver"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+comp -include "$dsn\src\switch_driver.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/switch_driver.vhd
+# Compile Entity "switch_driver"
+# Compile Architecture "switch_driver_arch" of Entity "switch_driver"
+# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
+comp -include "$dsn\src\hexled_driver.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/hexled_driver.vhd
+# Compile Entity "hexled_driver"
+# Compile Architecture "hexled_driver_arch" of Entity "hexled_driver"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+comp -include "$dsn\src\control_fsm.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/control_fsm.vhd
+# Compile Entity "control_fsm"
+# Compile Architecture "control_fsm_arch" of Entity "control_fsm"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+comp -include "$dsn\src\lab3_hexled_demo_tb\lab3_hexled_demo_tb.vhd"
+# Error: c:\My_Designs\LAB_3_Zhurman_IKM_m722a\LAB_3_Zhurman_IKM_m722a\src\lab3_hexled_demo_tb\lab3_hexled_demo_tb.vhd: no such file
+asim +access +r lab3_hexled_demo_tb 
+# VSIM: Simulation has finished.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6535 kB (elbread=427 elab2=5965 kernel=142 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Designs\LAB_3_Zhurman_IKM_m722a\LAB_3_Zhurman_IKM_m722a\src\wave.asdb
+#  22:34, 13 ?a?aiy 2023 ?.
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb'.
+# Waveform file 'untitled.awc' connected to 'c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb'.
+# Waveform file 'untitled.awc' connected to 'c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb'.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo_tb/sw_right" has already been traced.
+# WAVEFORM: 2 signal(s) inserted to virtual group 'main FSM'.
+# WAVEFORM: 3 signal(s) inserted to virtual group 'SW-LEFT'.
+# WAVEFORM: 3 signal(s) inserted to virtual group 'SW-LEFT'.
+# WAVEFORM: 3 signal(s) inserted to virtual group 'SW-LEFT'.
+# WAVEFORM: 3 signal(s) inserted to virtual group 'SW-LEFT'.
+# WAVEFORM: 3 signal(s) inserted to virtual group 'BEEPER'.
+wave
+# # testbench signals
+wave -noreg CLK
+wave -noreg RST
+wave -noreg swi_test
+wave -noreg sw_prev
+wave -noreg sw_next
+wave -noreg sw_right
+wave -noreg sw_left
+wave -noreg segment_data
+wave -noreg digit_select
+wave -noreg led_state
+wave -noreg beep_sound
+# # hexdigit display decoder
+wave -noreg hexdisplay
+# # main fsm signals
+wave -vgroup "main FSM" "UUT/main_fsm/fsm_state" "UUT/main_fsm/reg_sig"
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo_tb/clk" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo_tb/rst" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo_tb/swi_test" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo_tb/sw_prev" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo_tb/sw_next" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo_tb/sw_right" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo_tb/sw_left" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo_tb/segment_data" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo_tb/digit_select" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo_tb/led_state" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo_tb/beep_sound" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo_tb/hexdisplay" has already been traced.
+# VSIM: 0 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb'.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo_tb/clk" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo_tb/rst" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo_tb/swi_test" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo_tb/sw_prev" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo_tb/sw_next" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo_tb/sw_right" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo_tb/sw_left" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo_tb/segment_data" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo_tb/digit_select" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo_tb/led_state" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo_tb/beep_sound" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo_tb/hexdisplay" has already been traced.
+# VSIM: 0 object(s) traced.
+# WAVEFORM: 2 signal(s) inserted to virtual group 'main FSM'.
+# # switch driver LEFT signals
+wave -vgroup "SW-LEFT" "UUT/sw_drv1/sw_state_shiftreg" "UUT/sw_drv1/RIE" "UUT/sw_drv1/FAE"
+# WAVEFORM: 3 signal(s) inserted to virtual group 'SW-LEFT'.
+# # switch driver RIGHT signals
+wave -vgroup "SW-LEFT" "UUT/sw_drv2/sw_state_shiftreg" "UUT/sw_drv2/RIE" "UUT/sw_drv2/FAE"
+# WAVEFORM: 3 signal(s) inserted to virtual group 'SW-LEFT'.
+# # switch driver NEXT signals
+wave -vgroup "SW-LEFT" "UUT/sw_drv3/sw_state_shiftreg" "UUT/sw_drv3/RIE" "UUT/sw_drv3/FAE"
+# WAVEFORM: 3 signal(s) inserted to virtual group 'SW-LEFT'.
+# # switch driver PREV signals
+wave -vgroup "SW-LEFT" "UUT/sw_drv4/sw_state_shiftreg" "UUT/sw_drv4/RIE" "UUT/sw_drv4/FAE"
+# WAVEFORM: 3 signal(s) inserted to virtual group 'SW-LEFT'.
+# # switch driver BEEPER signals
+wave -vgroup "BEEPER" "UUT/beep_drv/snd_state" "UUT/beep_drv/beep_counter" "UUT/beep_drv/snd_counter"  
+# WAVEFORM: 3 signal(s) inserted to virtual group 'BEEPER'.
+run 360 us
+# KERNEL: stopped at time: 360 us
+runscript -do "C:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/lab3_hexled_demo_tb.do"
+# # Script to run lab3 main testbench
+SetActiveLib -work
+comp -include "$dsn\src\beep_driver.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/beep_driver.vhd
+# Compile Entity "beep_driver"
+# Compile Architecture "beep_driver_arch" of Entity "beep_driver"
+# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
+comp -include "$dsn\src\led_driver.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/led_driver.vhd
+# Compile Entity "led_driver"
+# Compile Architecture "led_driver_arch" of Entity "led_driver"
+# Compile success 0 Errors 0 Warnings  Analysis time :  15.0 [ms]
+comp -include "$dsn\src\switch_driver.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/switch_driver.vhd
+# Compile Entity "switch_driver"
+# Compile Architecture "switch_driver_arch" of Entity "switch_driver"
+# Compile success 0 Errors 0 Warnings  Analysis time :  15.0 [ms]
+comp -include "$dsn\src\hexled_driver.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/hexled_driver.vhd
+# Compile Entity "hexled_driver"
+# Compile Architecture "hexled_driver_arch" of Entity "hexled_driver"
+# Compile success 0 Errors 0 Warnings  Analysis time :  15.0 [ms]
+comp -include "$dsn\src\control_fsm.vhd"
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/control_fsm.vhd
+# Compile Entity "control_fsm"
+# Compile Architecture "control_fsm_arch" of Entity "control_fsm"
+# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
+comp -include "$dsn\src\lab3_hexled_demo_tb\lab3_hexled_demo_tb.vhd"
+# Error: c:\My_Designs\LAB_3_Zhurman_IKM_m722a\LAB_3_Zhurman_IKM_m722a\src\lab3_hexled_demo_tb\lab3_hexled_demo_tb.vhd: no such file
+asim +access +r lab3_hexled_demo_tb 
+# VSIM: Simulation has finished.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6535 kB (elbread=427 elab2=5965 kernel=142 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Designs\LAB_3_Zhurman_IKM_m722a\LAB_3_Zhurman_IKM_m722a\src\wave.asdb
+#  22:44, 13 ?a?aiy 2023 ?.
+#  Simulation has been initialized
+wave
+# # testbench signals
+wave -noreg CLK
+wave -noreg RST
+wave -noreg swi_test
+wave -noreg sw_prev
+wave -noreg sw_next
+wave -noreg sw_right
+wave -noreg sw_left
+wave -noreg segment_data
+wave -noreg digit_select
+wave -noreg led_state
+wave -noreg beep_sound
+# # hexdigit display decoder
+wave -noreg hexdisplay
+# # main fsm signals
+wave -vgroup "main FSM" "UUT/main_fsm/fsm_state" "UUT/main_fsm/reg_sig"
+# VSIM: 12 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'c:/My_Designs/LAB_3_Zhurman_IKM_m722a/LAB_3_Zhurman_IKM_m722a/src/wave.asdb'.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo_tb/clk" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo_tb/rst" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo_tb/swi_test" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo_tb/sw_prev" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo_tb/sw_next" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo_tb/sw_right" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo_tb/sw_left" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo_tb/segment_data" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo_tb/digit_select" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo_tb/led_state" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo_tb/beep_sound" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/lab3_hexled_demo_tb/hexdisplay" has already been traced.
+# VSIM: 12 object(s) traced.
+# WAVEFORM: 2 signal(s) inserted to virtual group 'main FSM'.
+# # switch driver LEFT signals
+wave -vgroup "SW-LEFT" "UUT/sw_drv1/sw_state_shiftreg" "UUT/sw_drv1/RIE" "UUT/sw_drv1/FAE"
+# WAVEFORM: 3 signal(s) inserted to virtual grou

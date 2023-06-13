@@ -1,0 +1,41 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=4
+Current Config=compile
+[Configurations]
+compile=LAB_3_Zhurman_IKM_m722a
+[Library]
+LAB_3_Zhurman_IKM_m722a=.\LAB_3_Zhurman_IKM_m722a\LAB_3_Zhurman_IKM_m722a.lib
+[$LibMap$]
+LAB_3_Zhurman_IKM_m722a=.
+Active_lib=
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+FLOWTOOLS=NONE
+FAMILY=
+fileopenfolder=C:\Users\sasha\Desktop\LAB\lab3\hexled_driver_tb
+[Files]
+/beep_driver.vhd=-1
+/control_fsm.vhd=-1
+/HEXLed_driver.vhd=-1
+/lab3_hexled_demo.vhd=-1
+/led_driver.vhd=-1
+/switch_driver.vhd=-1
+/lab3_hexled_demo_tb.do=-1
+/lab3_hexled_demo_tb.vhd=-1
+/hexled_driver_tb.vhd=-1
+/hexled_driver_tb_run.do=-1
+[Files.Data]
+.\src\beep_driver.vhd=VHDL Source Code
+.\src\control_fsm.vhd=VHDL Source Code
+.\src\HEXLed_driver.vhd=VHDL Source Code
+.\src\lab3_hexled_demo.vhd=VHDL Source Code
+.\src\led_driver.vhd=VHDL Source Code
+.\src\switch_driver.vhd=VHDL Source Code
+.\src\lab3_hexled_demo_tb.do=Macro
+.\src\lab3_hexled_demo_tb.vhd=VHDL Source Code
+.\src\hexled_driver_tb.vhd=VHDL Source Code
+.\src\hexled_driver_tb_run.do=Macro

@@ -1,0 +1,40 @@
+Active-HDL 13.0.376.8320 2023-06-13 22:44:08
+
+Elaboration top modules:
+Architecture                  lab3_hexled_demo_tb_arch(lab3_hexled_demo_tb)
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+Entity              | Architecture             | Library                 | Info | Compiler Version          | Compilation Options
+----------------------------------------------------------------------------------------------------------------------------------
+lab3_hexled_demo_tb | lab3_hexled_demo_tb_arch | LAB_3_Zhurman_IKM_m722a |      | 13.0.376.8320 (Windows64) | -O3
+lab3_hexled_demo    | lab3_hexled_demo_arch    | LAB_3_Zhurman_IKM_m722a |      | 13.0.376.8320 (Windows64) | -O3
+switch_driver       | switch_driver_arch       | LAB_3_Zhurman_IKM_m722a |      | 13.0.376.8320 (Windows64) | -O3
+control_fsm         | control_fsm_arch         | LAB_3_Zhurman_IKM_m722a |      | 13.0.376.8320 (Windows64) | -O3
+led_driver          | led_driver_arch          | LAB_3_Zhurman_IKM_m722a |      | 13.0.376.8320 (Windows64) | -O3
+hexled_driver       | hexled_driver_arch       | LAB_3_Zhurman_IKM_m722a |      | 13.0.376.8320 (Windows64) | -O3
+beep_driver         | beep_driver_arch         | LAB_3_Zhurman_IKM_m722a |      | 13.0.376.8320 (Windows64) | -O3
+----------------------------------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------------------------
+VHDL Package                                   | Library                 | Info | Compiler Version          | Compilation Options
+----------------------------------------------------------------------------------------------------------------------------------
+standard                                       | std                     |      |                           | <unavailable>
+TEXTIO                                         | std                     |      | 13.0.376.8320 (Windows64) |  -2019
+std_logic_1164                                 | ieee                    |      | 13.0.376.8320 (Windows64) |  -2008
+NUMERIC_STD                                    | ieee                    |      | 13.0.376.8320 (Windows64) |  -2008
+----------------------------------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------------------------
+Library                                        | Comment
+----------------------------------------------------------------------------------------------------------------------------------
+ieee                                           | Standard IEEE packages library
+LAB_3_Zhurman_IKM_m722a                        | None
+std                                            | Standard VHDL library
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+Simulation Options: asim +access +r lab3_hexled_demo_tb
+
+
+The performance of simulation is reduced. Version Student Edition
